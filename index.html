@@ -1,15 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Popar</title>
    <link rel="stylesheet" href="css/index.css">
+   <script src="js/index.js" defer></script>
 </head>
+
 <body>
-   
-   <p>something</p>
-   
-   <script src="js/index.js"></script>
+   <div class="container">
+      <h2>Password <span>Generator</span></h2>
+      <input type="text" id="password" placeholder="Erstelle Passwort" readonly>
+      <div class="lenght-content">
+         <label for="passwordLenght">Wähl password Länge:</label>
+         <select id="passwordLenght">
+            <option value="4">4</option>
+            <option value="8">8</option>
+            <option value="12">12</option>
+            <option value="16">16</option>
+         </select>
+      </div>
+      <button id="btn" onclick="generatePassword ()">Generieren</button>
+   </div>
 </body>
+
 </html>
