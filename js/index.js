@@ -1,16 +1,27 @@
-function checkNumber(){
-   let num = prompt("Enter a number");
-   num = Number(num);
-   
-   if(isNaN(num)){
-      alert("That's not a valid number");
+function isLeapYear(year) {
+   if (year % 4 === 0) {
+      if (year % 100 === 0) {
+         if (year % 400 === 0) {
+            return true;
+         }
+         return false;
+      }
+      return true;
    }
-   else if(num % 2 === 0){
-      alert("even number");
-   }
-   else{
-      alert("odd number");
-   }
+   return false;
 }
 
-checkNumber()
+let year = prompt("Enter a year");
+year = Number(year);
+
+if (isNaN(year)) {
+   alert("That's not a valid number");
+}
+else {
+   if (isLeapYear(year)) {
+      alert(year + " is a leap year.");
+   }
+   else {
+      alert(year + " is not a leap year.")
+   }
+}
